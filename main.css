@@ -1,0 +1,288 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap");
+
+html,
+body {
+  background: #253141;
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(37, 49, 65, 0.7) 0%,
+      #253141 80%,
+      #253141 100%
+    ),
+    url(https://d2skuhm0vrry40.cloudfront.net/2021/articles/2021-03-19-17-54/digitalfoundry-2021-apex-legends-switch-analysis-1616176480618.jpg/EG11/resize/1200x-1/digitalfoundry-2021-apex-legends-switch-analysis-1616176480618.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+header .left-menu {
+  display: flex;
+}
+
+header .left-menu .logo {
+  font-size: 2rem;
+  color: white;
+  padding-top: 30px;
+  font-weight: 700;
+}
+
+header .left-menu .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+
+header .left-menu .menu a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+header .right-menu {
+  display: flex;
+  padding: 30px 30px;
+  align-items: center;
+}
+
+header .right-menu .language {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  padding: 0 60px 0 0;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+header .right-menu .signin {
+  background: #0375d5;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+
+/*full-width container*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+#featured .container .title {
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+#featured {
+  padding: 50px 0 50px;
+}
+
+#featured .videos-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 620px 2fr 1fr;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .videos-section .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .videos-section .video .image {
+  background: url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-spiderman-video-thumb-block-8-en-110620?$800px$);
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#featured .videos-section .video.center {
+  width: 100%;
+  height: 349px;
+  background: url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-ratchet_clank-video-thumb-block-06-en-110620?$800px$);
+  transform: scale(1.05);
+  border: 2px solid #00b4f0;
+}
+
+#featured .videos-section .video.center .image {
+  width: 100%;
+  height: 349px;
+  background: url(https://gmedia.playstation.com/is/image/SIEPDC/ps5-ratchet_clank-video-thumb-block-06-en-110620?$800px$);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  border: 2px solid #00b4f0;
+}
+
+#featured .videos-section .video:nth-child(1) .image,
+#featured .videos-section .video:nth-child(5) .image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+#featured .videos-section .video:nth-child(1) .image .arrow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#featured .videos-section .video:nth-child(5) .image .arrow {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  right: 0;
+}
+
+#featured .container .videos-section .video:nth-child(1) .image .arrow img {
+  width: 50px;
+  height: 75px;
+}
+
+#featured .container .videos-section .video:nth-child(5) .image .arrow img {
+  width: 50px;
+  height: 75px;
+}
+
+#featured .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#featured .dots .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#featured .dots .circles .circle {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#featured .dots .circles .circle .background-color {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.2s ease-in-out;
+}
+
+#featured .dots .circles .circle:hover .background-color {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#featured .dots .circles .circle.active .background-color {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #00b4f0;
+}
+
+#top-games .container {
+  width: 1200px;
+  min-height: 350px;
+  margin: 0 auto;
+  margin-right: 0px;
+}
+
+#top-games .games {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 10px;
+}
+
+#top-games .games .game {
+  background: url("https://cdn.vox-cdn.com/thumbor/YSJgsm6kFJNofODSLfn6rDcNqZk=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22273504/apex_screenshot_season_8_fuse_hunting.jpg.adapt.1456w.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+  border-radius: 5px;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.65);
+  overflow: hidden;
+}
+
+#top-games .games .game .info {
+  background: #253041;
+  position: absolute;
+  height: 55px;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+
+#top-games .games .game .info .title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#top-games .games .game .info .views {
+  position: absolute;
+  bottom: 0;
+  font-weight: 300;
+  margin-top: 17px;
+  margin-right: 10px;
+  font-size: 0.8rem;
+  top: 20px;
+}
+
+#top-games .games .game .info .views img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  padding-top: 10px;
+  margin-right: 20px;
+  margin-top: 60px;
+  top: -78px;
+  left: 45px;
+}
+
+/*
+#top-games .games .game .info .views .fas.fa-eye {
+  margin-right: 10px;
+}*/
